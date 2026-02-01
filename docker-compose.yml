@@ -13,7 +13,7 @@ services:
       - 'traefik.http.routers.hub-landing.rule=Host(`hubmsg.octotech.az`)'
       - 'traefik.http.routers.hub-landing.entrypoints=web'
       # Nginx portu Dockerfile'da 80 olarak EXPOSE edildi
-      - 'traefik.http.services.hub-landing.loadbalancer.server.port=2006'
+      - 'traefik.http.services.hub-landing.loadbalancer.server.port=80'
 
 networks:
   edge:
