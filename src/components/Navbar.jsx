@@ -1,9 +1,9 @@
 const Navbar = ({ onLangClick }) => {
     return (
-        <header className="fixed top-0 w-full z-[1000] px-6 py-4 md:px-14 md:py-6 nav-blur">
+        <header className="absolute top-0 w-full z-[1000] px-4 py-2 md:px-10 md:py-3 nav-blur">
             <nav className="max-w-[1400px] mx-auto flex justify-between items-center text-sm md:text-base">
                 <div className="logo flex items-center group cursor-pointer select-none">
-                    <div className="w-24 md:w-32 h-auto transition-all duration-500 overflow-hidden">
+                    <div className="w-20 md:w-24 h-auto transition-all duration-500 overflow-hidden">
                         <img src="/sitelogo.png" alt="HubMSG Logo" className="w-full h-auto" />
                     </div>
                 </div>
