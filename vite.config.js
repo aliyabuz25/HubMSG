@@ -8,5 +8,12 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 2006,
     allowedHosts: ['hubmsg.octotech.az', 'all'],
+    proxy: {
+      '/api': {
+        target: 'https://hubmsgpanel.octotech.az/api',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
 })
