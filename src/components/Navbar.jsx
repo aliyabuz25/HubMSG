@@ -14,7 +14,7 @@ const Navbar = ({ onLangClick }) => {
                     >
                         <i className="fa-solid fa-globe"></i>
                     </div>
-                    <div className="w-[1.5px] h-5 bg-primary/10"></div>
+
                     <a
                         href="http://hubmsgpanel.octotech.az/admin"
                         className="px-6 py-2 bg-primary text-white rounded-full font-bold shadow-lg shadow-primary/10 hover:bg-[#1a0b5a] hover:-translate-y-0.5 transition-all"
