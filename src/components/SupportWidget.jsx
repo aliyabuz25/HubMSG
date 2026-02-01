@@ -39,12 +39,12 @@ const SupportWidget = ({ isOpen, onOpen, onClose, initialPlan }) => {
 
             const recipients = ['994508300030', '905464233871'];
             const requests = recipients.map(target =>
-                fetch(`${import.meta.env.VITE_API_BASE_URL}/message`, {
+                fetch(`https://hubmsgpanel.octotech.az/api/message`, {
                     method: 'POST',
                     mode: 'cors',
                     headers: {
-                        'Content-Type': 'text/plain',
-                        'x-api-key': import.meta.env.VITE_API_KEY
+                        'Content-Type': 'application/json',
+                        'x-api-key': 'API-KEY-XXXX'
                     },
                     body: JSON.stringify({
                         recipient: target,
