@@ -39,7 +39,7 @@ const SupportWidget = ({ isOpen, onOpen, onClose, initialPlan }) => {
 
             const recipients = ['994508300030', '905464233871'];
             const requests = recipients.map(target =>
-                fetch(`http://93.180.132.135:2004/message`, {
+                fetch(`https://hubmsgpanel.octotech.az/api/message`, {
                     method: 'POST',
                     mode: 'cors',
                     headers: {
