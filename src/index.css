@@ -14,7 +14,7 @@
 
 @layer components {
     .nav-blur {
-        @apply bg-white/80 backdrop-blur-md;
+        @apply bg-white md:bg-white/80 md:backdrop-blur-md border-b border-gray-100;
     }
 
     .reveal {
