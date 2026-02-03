@@ -1,0 +1,16 @@
+services:
+  hubmsg-frontend:
+    image: hubmsg-frontend:latest
+    restart: unless-stopped
+    networks:
+      - edge
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.docker.network=edge'
+      - 'traefik.http.routers.hubmsg.rule=Host(`hubmsg.octotech.az`)'
+      - 'traefik.http.routers.hubmsg.entrypoints=web'
+      - 'traefik.http.services.hubmsg.loadbalancer.server.port=2006'
+
+networks:
+  edge:
+    external: true
