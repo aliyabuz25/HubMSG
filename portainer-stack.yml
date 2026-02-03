@@ -1,6 +1,9 @@
 services:
   hubmsg-frontend:
     image: hubmsg-frontend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
     restart: unless-stopped
     networks:
       - edge
