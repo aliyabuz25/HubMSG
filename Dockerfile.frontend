@@ -7,8 +7,9 @@ COPY . .
 RUN npm run build
 
 # Production stage
+# Production stage
 FROM nginx:alpine as production-stage
-RUN mkdir -p /app/nginx-logs
+RUN mkdir -p /app/nginx-logs && chown -R nginx:nginx /app/nginx-logs && chmod -R 755 /app/nginx-logs
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 2006
